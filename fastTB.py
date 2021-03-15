@@ -599,9 +599,14 @@ def start_run(processID, POPU_SIZE, MAX_GEN, CROSS_RATE, MUTATE_RATE, sub_storie
     for example in sub_stories:
         start_time = time.time()
         raw_sentences = re.split("\n", example[0])
+
+        df = pd.DataFrame(raw_sents, columns =['raw'])
+        df['preprocess_raw'] = df['raw'].apply(lambda x: clean_text(x))
+        newdf = df.loc[(df['preprocess_raw'] != 'None')]
+        raw_sentences = newdf['preprocess_raw'].values.tolist()
         if len(raw_sentences) == 0:
             continue
-            raw_sents = example[0].split("\n")
+            
         title_raw = raw_sentences[0]
 
         sentences = []
