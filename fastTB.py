@@ -606,7 +606,7 @@ def clean_text(text):
 def start_run(processID, POPU_SIZE, MAX_GEN, CROSS_RATE, MUTATE_RATE, sub_stories, save_path, order_params, scheme):
     for example in sub_stories:
         start_time = time.time()
-        raw_sentences = re.split("\n", example[0])
+        raw_sents = re.split("\n", example[0])
 
         df = pd.DataFrame(raw_sents, columns =['raw'])
         df['preprocess_raw'] = df['raw'].apply(lambda x: clean_text(x))
