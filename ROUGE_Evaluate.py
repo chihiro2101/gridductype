@@ -32,17 +32,20 @@ def main():
     rouge_L_tmp = []
     number = 1
     for hyp, ref in zip(f_hyp, f_raw_ref):
-        rouge = Rouge()
-        scores = rouge.get_scores(hyp, ref, avg=True)
-        rouge_1 = scores["rouge-1"]["r"]
-        rouge_2 = scores["rouge-2"]["r"]
-        rouge_L = scores["rouge-l"]["r"]
-        rouge_1_tmp.append(rouge_1)
-        rouge_2_tmp.append(rouge_2)
-        rouge_L_tmp.append(rouge_L)
-        # import pdb; pdb.set_trace()
-        # print(number)
-        print(scores)
+        try:
+            rouge = Rouge()
+            scores = rouge.get_scores(hyp, ref, avg=True)
+            rouge_1 = scores["rouge-1"]["r"]
+            rouge_2 = scores["rouge-2"]["r"]
+            rouge_L = scores["rouge-l"]["r"]
+            rouge_1_tmp.append(rouge_1)
+            rouge_2_tmp.append(rouge_2)
+            rouge_L_tmp.append(rouge_L)
+            # import pdb; pdb.set_trace()
+            # print(number)
+            print(scores)
+        except Exception:
+            pass
         # number +=1
     rouge_1_avg = sta.mean(rouge_1_tmp)
     rouge_2_avg = sta.mean(rouge_2_tmp)

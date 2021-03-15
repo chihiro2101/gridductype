@@ -270,12 +270,18 @@ class Summerizer(object):
         if scheme == 0:
             life_time = min(self.MinLT + int(eta*(fitness/avg_fitness)), self.MaxLT)
         elif scheme == 1:
-            life_time = self.MinLT + int(2*eta*(fitness - min_fitness)/(max_fitness - min_fitness))
+            try:
+                life_time = self.MinLT + int(2*eta*(fitness - min_fitness)/(max_fitness - min_fitness))
+            except:
+                life_time = 2
         else:
-            if fitness <= avg_fitness:
-                life_time = self.MinLT + int(eta*(fitness - min_fitness)/(avg_fitness - min_fitness))
-            else:
-                life_time = int(0.5*(self.MinLT + self.MaxLT) + eta*(fitness - avg_fitness)/(max_fitness - avg_fitness))
+            try:
+                if fitness <= avg_fitness:
+                    life_time = self.MinLT + int(eta*(fitness - min_fitness)/(avg_fitness - min_fitness))
+                else:
+                    life_time = int(0.5*(self.MinLT + self.MaxLT) + eta*(fitness - avg_fitness)/(max_fitness - avg_fitness))
+            except:
+                life_time = 2
         return life_time
 
 
@@ -336,7 +342,7 @@ class Summerizer(object):
 
     def selection(self, population, popsize):
         population = self.evaluate_age(population, self.scheme)
-        max_sent = int(len(self.sentences)*0.3)
+        max_sent = int(len(self.sentences)*0.32)
         if len(self.sentences) < 4:
             max_sent = len(self.sentences)
         new_population = []

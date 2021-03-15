@@ -167,8 +167,7 @@ class METRIC(object):
         # pos = 0.15
         # noun = 0.3
 
-        fit = pos*self.position() + rel*self.relationT() + le * \
-            self.leng() + noun*self.scale_noun()
+        fit = pos*self.position() + rel*self.relationT() + le * self.leng() + noun*self.scale_noun()
         # fit = pos*self.position() + rel*self.relationT() + cover*self.Cov() + coh*self.cohesion() +le*self.leng()
         return fit
 
