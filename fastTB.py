@@ -585,12 +585,14 @@ def load_a_doc(filename):
 
 
 def load_docs(directory):
-	docs = list()
-	for name in os.listdir(directory):
-		filename = directory + '/' + name
-		doc = load_a_doc(filename)
-		docs.append((doc, name))
-	return docs
+    docs = list()
+    list_file = os.listdir(directory)
+    random.shuffle(list_file)
+    for name in list_file:
+        filename = directory + '/' + name
+        doc = load_a_doc(filename)
+        docs.append((doc, name))
+    return docs
 
 
 def clean_text(text):
