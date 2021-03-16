@@ -1,0 +1,14 @@
+Ground controllers at the Goddard Space Flight Center finally made contact today with the two main antennas on the $15 billion Hubble Space Telescope after trying for more than six hours to lock on
+Applause erupted in the Hubble control center in Greenbelt Md as the glitch that marred Hubble's first full day in space was solved
+``We have confirmation that we have achieved communication with the Tracking and Data Relay Satellite through the high-gain antenna system'' said NASA's Dave Drachlis
+Engineers had said all along they believed the antennas were working all right and that the problem was in incorrectly pointing either the satellite or the TDRS an orbiting communications satellite that acts as a switchboard
+In the successful attempt they nearly doubled the width of the antennas' beams to take in more territory from a sweep of 62 degrees to 108 degrees
+The telescope's low-gain antennas which receive and transmit information at a much slower rate and can be used in emergencies were working well
+Steve Terry director of a team calibrating various aspects of the telescope said the first outage was caused by human error and was not a serious problem
+The second failure occurred at 644 am when controllers attempted to send a signal to the telescope's two high-gain antennas through the TDRS
+I guess you're awake after that song'' said Kathy Thornton shuttle communicator
+``We appreciate the good words from everybody'' replied Discovery Commander Loren Shriver
+After Wednesday's deployment Shriver gently backed Discovery away from the telescope and put the shuttle through a series of maneuvers the last one completed this morning to ``park'' Discovery in orbit 46 miles behind Hubble
+``Well it sure is now Loren and thanks for all the great work you've done'' replied Mission Control
+Then on Tuesday NASA expects to release the first image from the telescope an open star cluster in the constellation Carina
+Hubble project manager Fred Wojtalik said the telescope would be tested today for its ability to maneuver before the aperture door is opened

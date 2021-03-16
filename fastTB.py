@@ -342,7 +342,7 @@ class Summerizer(object):
 
     def selection(self, population, popsize):
         population = self.evaluate_age(population, self.scheme)
-        max_sent = int(len(self.sentences)*0.32)
+        max_sent = int(len(self.sentences)*0.3)
         if len(self.sentences) < 4:
             max_sent = len(self.sentences)
         new_population = []
